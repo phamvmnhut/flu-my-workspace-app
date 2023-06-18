@@ -10,6 +10,7 @@ import '../../widgets/bottom_sheet/dashboard_add_sheet.dart';
 
 import '../notification_screen/notifications.dart';
 import '../project/projects.dart';
+import '../search_screen/search_screen.dart';
 import 'dashboard.dart';
 
 class Architecture extends StatefulWidget {
@@ -24,7 +25,7 @@ class _ArchitectureState extends State<Architecture> {
     Dashboard(),
     const ProjectScreen(),
     const NotificationScreen(),
-    // SearchScreen()
+    const SearchScreen(),
   ];
 
   ValueNotifier<int> bottomNavigatorTrigger = ValueNotifier(0);
