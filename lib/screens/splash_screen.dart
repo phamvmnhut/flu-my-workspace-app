@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           DarkRadialBackground(
             color: HexColor.fromHex("#181a1f"),
-            position: "topLeft",
+            position: DarkRadialBackground.topLeft,
           ),
           const Positioned(left: 140, child: AppLogo()),
           Center(

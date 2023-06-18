@@ -16,6 +16,9 @@ class DarkRadialBackground extends StatelessWidget {
     required this.position,
   });
 
+  static const String topLeft = "topLeft";
+  static const String bottomRight = "bottomRight";
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -23,7 +26,7 @@ class DarkRadialBackground extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: RadialGradient(
             colors: [...list, color],
-            center: (position == "bottomRight")
+            center: (position == bottomRight)
                 ? const Alignment(1.0, 1.0)
                 : const Alignment(-1.0, -1.0),
           ),

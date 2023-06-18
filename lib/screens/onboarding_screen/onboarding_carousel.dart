@@ -8,11 +8,13 @@ import '../../widgets/dark_background/dark_radial_background.dart';
 import '../../widgets/onboarding/image_outlined_button.dart';
 import '../../widgets/onboarding/slider_captioned_image.dart';
 
+import '../auth_screen/email_address.dart';
+
 class OnboardingCarousel extends StatefulWidget {
   const OnboardingCarousel({super.key});
 
   @override
-  _OnboardingCarouselState createState() => _OnboardingCarouselState();
+  State<OnboardingCarousel> createState() => _OnboardingCarouselState();
 }
 
 class _OnboardingCarouselState extends State<OnboardingCarousel> {
@@ -95,7 +97,7 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
                         height: 60,
                         child: ElevatedButton(
                             onPressed: () {
-                              // Get.to(() => EmailAddressScreen());
+                              Get.to(() => const EmailAddressScreen());
                             },
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(

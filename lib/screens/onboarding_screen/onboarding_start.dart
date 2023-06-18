@@ -9,6 +9,7 @@ import '../../widgets/onboarding/background_image.dart';
 import '../../widgets/onboarding/bubble.dart';
 import '../../widgets/onboarding/loading_stickers.dart';
 import '../../widgets/shapes/background_hexagon.dart';
+
 import 'onboarding_carousel.dart';
 
 class OnboardingStart extends StatelessWidget {

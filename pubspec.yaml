@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.5
   google_fonts: ^5.0.0
   flutter_shapes: ^0.3.0
+  font_awesome_flutter: ^10.4.0
 
 dev_dependencies:
   flutter_test:
