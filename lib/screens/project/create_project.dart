@@ -16,6 +16,7 @@ import '../../widgets/notification/notification_card.dart';
 import '../../widgets/project/post_bottom_widget.dart';
 import '../../widgets/project/project_badge.dart';
 import '../../widgets/project/project_selectable_container.dart';
+import '../chat_screen/messaging_screen.dart';
 
 class CreateProjectScreen extends StatelessWidget {
   const CreateProjectScreen({Key? key}) : super(key: key);
@@ -43,8 +44,8 @@ class CreateProjectScreen extends StatelessWidget {
       "assets/slider-background-3.png"
     ];
 
-    // List<SentImage> imageCards = List.generate(
-    //     sentImage.length, (index) => SentImage(image: sentImage[index]));
+    List<SentImage> imageCards = List.generate(
+        sentImage.length, (index) => SentImage(image: sentImage[index]));
 
     return Scaffold(
         body: Stack(children: [
@@ -149,7 +150,7 @@ class CreateProjectScreen extends StatelessWidget {
                 height: 120,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  // children: [...imageCards],
+                  children: [...imageCards],
                 ),
               ),
               AppSpaces.verticalSpace40,
