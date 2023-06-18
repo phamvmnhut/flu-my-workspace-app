@@ -8,6 +8,7 @@ import '../../widgets/dashboard/bottomNavigationItem.dart';
 import '../../widgets/dashboard/dashboard_add_icon.dart';
 import '../../widgets/bottom_sheet/dashboard_add_sheet.dart';
 
+import '../notification_screen/notifications.dart';
 import '../project/projects.dart';
 import 'dashboard.dart';
 
@@ -21,8 +22,8 @@ class Architecture extends StatefulWidget {
 class _ArchitectureState extends State<Architecture> {
   final List<Widget> dashBoardScreens = [
     Dashboard(),
-    ProjectScreen(),
-    // NotificationScreen(),
+    const ProjectScreen(),
+    const NotificationScreen(),
     // SearchScreen()
   ];
 
