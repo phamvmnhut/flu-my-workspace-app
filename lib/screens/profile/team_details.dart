@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_workspace/widgets/task/table_calendar.dart';
 
 import '../../constants/constants.dart';
 import '../../data/data_model.dart';
@@ -81,7 +82,7 @@ class TeamDetails extends StatelessWidget {
                     builder: (BuildContext context, _, __) {
                       return settingsButtonTrigger.value == 0
                           ? const Expanded(child: TeamProjectOverview())
-                          : const SizedBox();
+                          : const CalendarView();
                     })
               ])))
     ]));
@@ -104,7 +105,6 @@ class TeamProjectOverview extends StatelessWidget {
         //change height 125
         mainAxisExtent: 220,
         crossAxisSpacing: 10,
-        
       ),
       itemBuilder: (_, index) => ProjectCardVertical(
         projectName: AppData.productData[index]['projectName'],

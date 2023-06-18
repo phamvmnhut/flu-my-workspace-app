@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../screens/project/create_project.dart';
 import '../../screens/project/set_members.dart';
+import '../../screens/task_screen/task_due_date.dart';
 import '../../utils/bottom_sheets.dart';
 import '../../values/values.dart';
 
@@ -40,7 +41,7 @@ class DashboardAddBottomSheet extends StatelessWidget {
           label: 'Create Event',
           icon: Icons.fiber_smart_record,
           callback: () {
-            // Get.to(() => TaskDueDate());
+            Get.to(() => const TaskDueDate());
           }),
     ]);
   }

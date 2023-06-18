@@ -3,6 +3,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../screens/task_screen/set_assignees.dart';
 import '../../utils/bottom_sheets.dart';
 import '../../values/values.dart';
 import '../add_sub_icon.dart';
@@ -60,7 +61,7 @@ class CreateTaskBottomSheet extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               InkWell(
                 onTap: () {
-                  // Get.to(() => SetAssigneesScreen());
+                  Get.to(() => const SetAssigneesScreen());
                 },
                 child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   ProfileDummy(
