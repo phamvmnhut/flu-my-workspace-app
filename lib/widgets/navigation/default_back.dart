@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../screens/profile/edit_profile.dart';
 import '../../values/values.dart';
 import '../dummy/profile_dummy.dart';
 import '../profile/text_outlined_button.dart';
@@ -37,7 +38,7 @@ class DefaultNav extends StatelessWidget {
             width: 75,
             content: "Edit",
             onPressed: () {
-              // Get.to(() => EditProfilePage());
+              Get.to(() => const EditProfilePage());
             },
           );
         } else {

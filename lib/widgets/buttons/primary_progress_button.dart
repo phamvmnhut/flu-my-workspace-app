@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../values/values.dart';
@@ -24,7 +25,7 @@ class PrimaryProgressButton extends StatelessWidget {
       width: width ?? 130,
       height: height ?? 60,
       child: ElevatedButton(
-          onPressed: callback,
+          onPressed: callback ?? Get.back,
           style: ButtonStyle(
               backgroundColor:
                   MaterialStateProperty.all<Color>(HexColor.fromHex("246CFE")),

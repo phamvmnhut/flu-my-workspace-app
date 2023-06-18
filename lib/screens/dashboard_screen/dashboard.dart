@@ -9,6 +9,7 @@ import '../../values/values.dart';
 import '../../widgets/bottom_sheet/dashboard_settings_sheet.dart';
 import '../../widgets/buttons/primary_tab_buttons.dart';
 import '../../widgets/navigation/dasboard_header.dart';
+import '../profile/profile_overview.dart';
 import '../../widgets/shapes/app_settings_icon.dart';
 import 'dashboard_tab_screen/overview.dart';
 import 'dashboard_tab_screen/productivity.dart';
@@ -38,7 +39,7 @@ class Dashboard extends StatelessWidget {
                 // page: ChatScreen(),
                 title: "Dashboard",
                 onImageTapped: () {
-                  // Get.to(() => ProfileOverview());
+                  Get.to(() => const ProfileOverview());
                 },
               ),
               AppSpaces.verticalSpace20,

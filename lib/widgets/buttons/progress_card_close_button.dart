@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../values/values.dart';
 
+/// Create a back botton to close card
 class ProgressCardCloseButton extends StatelessWidget {
   final VoidCallback? onPressed;
   const ProgressCardCloseButton({Key? key, this.onPressed}) : super(key: key);
