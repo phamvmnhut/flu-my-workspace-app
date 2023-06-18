@@ -8,6 +8,7 @@ import '../../widgets/dark_background/dark_radial_background.dart';
 import '../../widgets/navigation/default_back.dart';
 import '../../widgets/onboarding/plan_card.dart';
 import '../../widgets/onboarding/toggle_option.dart';
+import '../dashboard_screen/overview.dart';
 
 class ChoosePlan extends StatelessWidget {
   const ChoosePlan({super.key});
@@ -124,7 +125,7 @@ class ChoosePlan extends StatelessWidget {
                       width: 120,
                       label: "Done",
                       callback: () {
-                        // Get.to(() => Timeline());
+                        Get.to(() => const Architecture());
                       })
                 ]),
           ))

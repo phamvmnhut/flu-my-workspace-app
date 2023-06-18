@@ -5,12 +5,7 @@ import '../values/values.dart';
 
 String tabSpace = "\t\t\t";
 
-final List<Widget> dashBoardScreens = [
-  // Dashboard(),
-  // ProjectScreen(),
-  // NotificationScreen(),
-  // SearchScreen()
-];
+
 
 List<Color> progressCardGradientList = [
   //grenn
