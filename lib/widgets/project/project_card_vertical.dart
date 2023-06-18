@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../screens/project/project_detail.dart';
 import '../../values/values.dart';
 import 'project_badge.dart';
 
@@ -25,11 +26,11 @@ class ProjectCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Get.to(() => ProjectDetails(
-        //       category: category,
-        //       projectName: projectName,
-        //       color: color,
-        //     ));
+        Get.to(() => ProjectDetails(
+              category: category,
+              projectName: projectName,
+              color: color,
+            ));
       },
       child: Container(
         // width: 150,

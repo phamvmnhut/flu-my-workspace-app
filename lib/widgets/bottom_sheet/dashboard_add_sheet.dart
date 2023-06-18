@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../screens/project/create_project.dart';
+import '../../screens/project/set_members.dart';
 import '../../utils/bottom_sheets.dart';
 import '../../values/values.dart';
 
-import '../bottom_sheet/bottom_sheet_holder.dart';
+import 'bottom_sheet_holder.dart';
 import '../onboarding/labelled_option.dart';
 import '../dashboard/create_task.dart';
 
@@ -26,13 +28,13 @@ class DashboardAddBottomSheet extends StatelessWidget {
           label: 'Create Project',
           icon: Icons.device_hub,
           callback: () {
-            // Get.to(() => CreateProjectScreen());
+            Get.to(() => const CreateProjectScreen());
           }),
       LabelledOption(
           label: 'Create team',
           icon: Icons.people,
           callback: () {
-            // Get.to(() => SelectMembersScreen());
+            Get.to(() => const SelectMembersScreen());
           }),
       LabelledOption(
           label: 'Create Event',
