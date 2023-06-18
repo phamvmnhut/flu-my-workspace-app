@@ -8,6 +8,7 @@ import '../../utils/bottom_sheets.dart';
 import '../../values/values.dart';
 import '../add_sub_icon.dart';
 import '../bottom_sheet/bottom_sheet_holder.dart';
+import '../bottom_sheet/dashboard_add_project_sheet.dart';
 import '../dummy/profile_dummy.dart';
 import '../form/form_input_unlabelled.dart';
 import 'sheet_goto_calendar.dart';
@@ -29,11 +30,14 @@ class CreateTaskBottomSheet extends StatelessWidget {
         AppSpaces.verticalSpace10,
         Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Row(children: [
               const Icon(Icons.contacts, color: Colors.white),
               AppSpaces.horizontalSpace10,
-              Text("Unity Dashboard  ", style: GoogleFonts.lato(color: Colors.white, fontWeight: FontWeight.w700)),
+              Text("Unity Dashboard  ",
+                  style: GoogleFonts.lato(
+                      color: Colors.white, fontWeight: FontWeight.w700)),
               const Icon(Icons.expand_more, color: Colors.white),
             ]),
             AppSpaces.verticalSpace20,
@@ -44,7 +48,10 @@ class CreateTaskBottomSheet extends StatelessWidget {
                     height: 20,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        gradient: LinearGradient(colors: [HexColor.fromHex("FD916E"), HexColor.fromHex("FFE09B")]))),
+                        gradient: LinearGradient(colors: [
+                          HexColor.fromHex("FD916E"),
+                          HexColor.fromHex("FFE09B")
+                        ]))),
                 AppSpaces.horizontalSpace20,
                 Expanded(
                   child: UnlabelledFormInput(
@@ -63,19 +70,21 @@ class CreateTaskBottomSheet extends StatelessWidget {
                 onTap: () {
                   Get.to(() => const SetAssigneesScreen());
                 },
-                child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  ProfileDummy(
-                      color: HexColor.fromHex("94F0F1"),
-                      dummyType: ProfileDummyType.Image,
-                      scale: 1.5,
-                      image: "assets/man-head.png"),
-                  AppSpaces.horizontalSpace10,
-                  const CircularCardLabel(
-                    label: 'Assigned to',
-                    value: 'Dereck Boyle',
-                    color: Colors.white,
-                  )
-                ]),
+                child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ProfileDummy(
+                          color: HexColor.fromHex("94F0F1"),
+                          dummyType: ProfileDummyType.Image,
+                          scale: 1.5,
+                          image: "assets/man-head.png"),
+                      AppSpaces.horizontalSpace10,
+                      const CircularCardLabel(
+                        label: 'Assigned to',
+                        value: 'Dereck Boyle',
+                        color: Colors.white,
+                      )
+                    ]),
               ),
               SheetGoToCalendarWidget(
                 cardBackgroundColor: HexColor.fromHex("7DBA67"),
@@ -90,12 +99,17 @@ class CreateTaskBottomSheet extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               SizedBox(
                 width: Utils.screenWidth * 0.6,
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  const BottomSheetIcon(icon: Icons.local_offer_outlined),
-                  Transform.rotate(angle: 195.2, child: const BottomSheetIcon(icon: Icons.attach_file)),
-                  const BottomSheetIcon(icon: FeatherIcons.flag),
-                  const BottomSheetIcon(icon: FeatherIcons.image)
-                ]),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const BottomSheetIcon(icon: Icons.local_offer_outlined),
+                      Transform.rotate(
+                          angle: 195.2,
+                          child:
+                              const BottomSheetIcon(icon: Icons.attach_file)),
+                      const BottomSheetIcon(icon: FeatherIcons.flag),
+                      const BottomSheetIcon(icon: FeatherIcons.image)
+                    ]),
               ),
               AddSubIcon(
                 scale: 0.8,
@@ -110,11 +124,11 @@ class CreateTaskBottomSheet extends StatelessWidget {
   }
 
   void _addProject() {
-    // showAppBottomSheet(
-    //   DashboardAddProjectSheet(),
-    //   isScrollControlled: true,
-    //   popAndShow: true,
-    // );
+    showAppBottomSheet(
+      DashboardAddProjectSheet(),
+      isScrollControlled: true,
+      popAndShow: true,
+    );
   }
 }
 
