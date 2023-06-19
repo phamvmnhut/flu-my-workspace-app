@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../data/data_model.dart';
 import '../../values/values.dart';
@@ -40,7 +41,12 @@ class ChatScreen extends StatelessWidget {
                   SearchBox(
                       placeholder: 'Search', controller: searchController),
                   AppSpaces.verticalSpace20,
-                  const SelectionTab(title: "GROUP", page: NewGroupScreen()),
+                  SelectionTab(
+                    title: "GROUP",
+                    onTap: () {
+                      Get.to(() => const NewGroupScreen());
+                    },
+                  ),
                   AppSpaces.verticalSpace20,
                   const BadgedTitle(
                     title: "Marketing",
@@ -64,8 +70,12 @@ class ChatScreen extends StatelessWidget {
                       scale: 0.8,
                       child: buildStackedImages(numberOfMembers: "2")),
                   AppSpaces.verticalSpace20,
-                  const SelectionTab(
-                      title: "DIRECT MESSAGES", page: NewMessageScreen()),
+                  SelectionTab(
+                    title: "DIRECT MESSAGES",
+                    onTap: () {
+                      Get.to(() => const NewMessageScreen());
+                    },
+                  ),
                   AppSpaces.verticalSpace20,
                   Expanded(
                     child: MediaQuery.removePadding(

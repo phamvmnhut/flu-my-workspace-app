@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../values/values.dart';
@@ -7,8 +6,8 @@ import '../shapes/dashed_circle.dart';
 
 class SelectionTab extends StatelessWidget {
   final String title;
-  final StatelessWidget? page;
-  const SelectionTab({Key? key, required this.title, this.page})
+  final VoidCallback? onTap;
+  const SelectionTab({Key? key, required this.title, this.onTap})
       : super(key: key);
 
   @override
@@ -24,9 +23,7 @@ class SelectionTab extends StatelessWidget {
                 color: HexColor.fromHex("616575"),
               )),
           InkWell(
-            onTap: () {
-              Get.to(() => page!);
-            },
+            onTap: onTap,
             child: CircularBorder(
                 color: HexColor.fromHex("616575"),
                 width: 1,

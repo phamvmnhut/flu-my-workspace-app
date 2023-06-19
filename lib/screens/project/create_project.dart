@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../data/data_model.dart';
@@ -16,7 +17,9 @@ import '../../widgets/notification/notification_card.dart';
 import '../../widgets/project/post_bottom_widget.dart';
 import '../../widgets/project/project_badge.dart';
 import '../../widgets/project/project_selectable_container.dart';
+
 import '../chat_screen/messaging_screen.dart';
+import '../task_screen/set_assignees.dart';
 
 class CreateProjectScreen extends StatelessWidget {
   const CreateProjectScreen({Key? key}) : super(key: key);
@@ -78,11 +81,16 @@ class CreateProjectScreen extends StatelessWidget {
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              ProfileDummy(
-                                  color: HexColor.fromHex("94F0F1"),
-                                  dummyType: ProfileDummyType.Image,
-                                  scale: 1.5,
-                                  image: "assets/man-head.png"),
+                              InkWell(
+                                child: ProfileDummy(
+                                    color: HexColor.fromHex("94F0F1"),
+                                    dummyType: ProfileDummyType.Image,
+                                    scale: 1.5,
+                                    image: "assets/man-head.png"),
+                                onTap: () {
+                                  Get.to(() => const SetAssigneesScreen());
+                                },
+                              ),
                               AppSpaces.horizontalSpace10,
                               const CircularCardLabel(
                                 label: 'Assigned to',
